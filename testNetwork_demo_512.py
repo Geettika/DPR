@@ -48,7 +48,7 @@ saveFolder = 'result'
 if not os.path.exists(saveFolder):
     os.makedirs(saveFolder)
 
-img = cv2.imread('data/helen_test_00.jpg')
+img = cv2.imread('data/kajal_test_00.jpg')
 row, col, _ = img.shape
 img = cv2.resize(img, (512, 512))
 Lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
@@ -92,6 +92,6 @@ for i in range(7):
     resultLab = cv2.cvtColor(Lab, cv2.COLOR_LAB2BGR)
     resultLab = cv2.resize(resultLab, (col, row))
     cv2.imwrite(os.path.join(saveFolder, \
-         'helen_test_{:02d}.jpg'.format(i)), resultLab)
+         'kajal_test_{:02d}.jpg'.format(i)), resultLab)
     #----------------------------------------------
 
